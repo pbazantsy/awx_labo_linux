@@ -1,0 +1,12 @@
+---
+#configuramos httpd.conf
+- name: configuramos httpd.conf
+  copy: src=httpd.conf.pabazan dest=/etc/httpd/conf/httpd.conf
+  notify:
+   - restart pablohttpd service  
+
+#configuramos index.html 
+- name: configuramos index.html
+  copy: src=index.html.pabazan dest=/var/www/html/index.html
+  notify:
+   - restart pablohttpd service  

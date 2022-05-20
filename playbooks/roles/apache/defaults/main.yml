@@ -1,0 +1,6 @@
+---
+# defaults file for apache
+apache_packages:
+  - httpd
+
+apache_service: httpd
